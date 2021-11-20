@@ -26,6 +26,7 @@
 		13B428CC2748A52900DE2E6D /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C82748A52800DE2E6D /* License.swift */; };
 		13B428D42748FF5A00DE2E6D /* DetailRepository.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B428D32748FF5A00DE2E6D /* DetailRepository.storyboard */; };
 		13B428D62748FF8900DE2E6D /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428D52748FF8900DE2E6D /* DetailRepositoryViewController.swift */; };
+		13B428D8274909AA00DE2E6D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		13B428C82748A52800DE2E6D /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		13B428D32748FF5A00DE2E6D /* DetailRepository.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailRepository.storyboard; sourceTree = "<group>"; };
 		13B428D52748FF8900DE2E6D /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
+		13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				13B428C02748A3C300DE2E6D /* String+Extensions.swift */,
+				13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				13B428AE27489E2800DE2E6D /* WebService.swift in Sources */,
 				13B428CA2748A52900DE2E6D /* Owner.swift in Sources */,
 				13B428D62748FF8900DE2E6D /* DetailRepositoryViewController.swift in Sources */,
+				13B428D8274909AA00DE2E6D /* UIImage+Extensions.swift in Sources */,
 				13B428C12748A3C300DE2E6D /* String+Extensions.swift in Sources */,
 				13B4289B27477BF200DE2E6D /* TrendingGit.xcdatamodeld in Sources */,
 			);

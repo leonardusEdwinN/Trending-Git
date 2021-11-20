@@ -89,8 +89,8 @@ extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectio
         
         
         let repositoryVM = listRepositoriesViewModel.modelAt(indexPath.row)
-        if let fork = repositoryVM.item.forks_count, let star = repositoryVM.item.stargazers_count{
-            cell.setUI(image: "", title: repositoryVM.item.name ?? "Repository Name", desc: "Fork : \(fork), Star : \(star)")
+        if let fork = repositoryVM.item.forks_count, let star = repositoryVM.item.stargazers_count, let image = repositoryVM.item.owner?.avatar_url, let repoName = repositoryVM.item.name{
+            cell.setUI(image: image, title: repoName, desc: "Fork : \(fork), Star : \(star)")
         }
         return cell
     }

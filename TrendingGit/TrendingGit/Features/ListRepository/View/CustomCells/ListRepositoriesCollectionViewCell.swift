@@ -16,12 +16,17 @@ class ListRepositoriesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         viewOuter.layer.cornerRadius = 20
+        imageCell.layer.cornerRadius = self.imageCell.frame.size.width / 2
         // Initialization code
     }
     
     func setUI(image: String, title: String, desc: String){
+        if let imageUrl = URL(string: image){
+            imageCell.loadImage(withUrl: imageUrl)
+        }
         labelName.text = title
         labelDesc.text = desc
     }
 
 }
+

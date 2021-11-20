@@ -9,23 +9,43 @@
 /* Begin PBXBuildFile section */
 		13B4289127477BF200DE2E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4289027477BF200DE2E6D /* AppDelegate.swift */; };
 		13B4289327477BF200DE2E6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4289227477BF200DE2E6D /* SceneDelegate.swift */; };
-		13B4289527477BF200DE2E6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4289427477BF200DE2E6D /* ViewController.swift */; };
-		13B4289827477BF200DE2E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B4289627477BF200DE2E6D /* Main.storyboard */; };
 		13B4289B27477BF200DE2E6D /* TrendingGit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13B4289927477BF200DE2E6D /* TrendingGit.xcdatamodeld */; };
 		13B4289D27477BF400DE2E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B4289C27477BF400DE2E6D /* Assets.xcassets */; };
 		13B428A027477BF400DE2E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B4289E27477BF400DE2E6D /* LaunchScreen.storyboard */; };
+		13B428AE27489E2800DE2E6D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428AD27489E2800DE2E6D /* WebService.swift */; };
+		13B428B527489E8200DE2E6D /* ListRepositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B428B427489E8200DE2E6D /* ListRepositories.storyboard */; };
+		13B428B827489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */; };
+		13B428B927489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */; };
+		13B428BC27489FC600DE2E6D /* ListRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428BB27489FC600DE2E6D /* ListRepositoriesViewController.swift */; };
+		13B428BE2748A39000DE2E6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428BD2748A39000DE2E6D /* Constants.swift */; };
+		13B428C12748A3C300DE2E6D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C02748A3C300DE2E6D /* String+Extensions.swift */; };
+		13B428C42748A4A400DE2E6D /* ListRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C32748A4A400DE2E6D /* ListRepositoriesViewModel.swift */; };
+		13B428C92748A52800DE2E6D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C52748A52800DE2E6D /* Repository.swift */; };
+		13B428CA2748A52900DE2E6D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C62748A52800DE2E6D /* Owner.swift */; };
+		13B428CB2748A52900DE2E6D /* RepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C72748A52800DE2E6D /* RepositoriesResponse.swift */; };
+		13B428CC2748A52900DE2E6D /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C82748A52800DE2E6D /* License.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13B4288D27477BF200DE2E6D /* TrendingGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B4289027477BF200DE2E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13B4289227477BF200DE2E6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13B4289427477BF200DE2E6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		13B4289727477BF200DE2E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13B4289A27477BF200DE2E6D /* TrendingGit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrendingGit.xcdatamodel; sourceTree = "<group>"; };
 		13B4289C27477BF400DE2E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B4289F27477BF400DE2E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13B428A127477BF400DE2E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B428AD27489E2800DE2E6D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		13B428B427489E8200DE2E6D /* ListRepositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListRepositories.storyboard; sourceTree = "<group>"; };
+		13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRepositoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		13B428BB27489FC600DE2E6D /* ListRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesViewController.swift; sourceTree = "<group>"; };
+		13B428BD2748A39000DE2E6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		13B428C02748A3C300DE2E6D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		13B428C32748A4A400DE2E6D /* ListRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		13B428C52748A52800DE2E6D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		13B428C62748A52800DE2E6D /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		13B428C72748A52800DE2E6D /* RepositoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesResponse.swift; sourceTree = "<group>"; };
+		13B428C82748A52800DE2E6D /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +78,98 @@
 		13B4288F27477BF200DE2E6D /* TrendingGit */ = {
 			isa = PBXGroup;
 			children = (
+				13B428BF2748A3B500DE2E6D /* Extensions */,
+				13B428AF27489E4500DE2E6D /* Features */,
+				13B428AC27489E1700DE2E6D /* Services */,
+				13B428AB27489DFE00DE2E6D /* Utils */,
 				13B4289027477BF200DE2E6D /* AppDelegate.swift */,
 				13B4289227477BF200DE2E6D /* SceneDelegate.swift */,
-				13B4289427477BF200DE2E6D /* ViewController.swift */,
-				13B4289627477BF200DE2E6D /* Main.storyboard */,
 				13B4289C27477BF400DE2E6D /* Assets.xcassets */,
 				13B4289E27477BF400DE2E6D /* LaunchScreen.storyboard */,
 				13B428A127477BF400DE2E6D /* Info.plist */,
 				13B4289927477BF200DE2E6D /* TrendingGit.xcdatamodeld */,
 			);
 			path = TrendingGit;
+			sourceTree = "<group>";
+		};
+		13B428AB27489DFE00DE2E6D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13B428BD2748A39000DE2E6D /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		13B428AC27489E1700DE2E6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13B428AD27489E2800DE2E6D /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		13B428AF27489E4500DE2E6D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				13B428B027489E4B00DE2E6D /* List */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		13B428B027489E4B00DE2E6D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				13B428BA27489FAF00DE2E6D /* Controllers */,
+				13B428B327489E6800DE2E6D /* View */,
+				13B428B227489E6400DE2E6D /* Model */,
+				13B428B127489E5E00DE2E6D /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		13B428B127489E5E00DE2E6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				13B428C32748A4A400DE2E6D /* ListRepositoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13B428B227489E6400DE2E6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13B428C52748A52800DE2E6D /* Repository.swift */,
+				13B428C72748A52800DE2E6D /* RepositoriesResponse.swift */,
+				13B428C82748A52800DE2E6D /* License.swift */,
+				13B428C62748A52800DE2E6D /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13B428B327489E6800DE2E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13B428B427489E8200DE2E6D /* ListRepositories.storyboard */,
+				13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */,
+				13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13B428BA27489FAF00DE2E6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13B428BB27489FC600DE2E6D /* ListRepositoriesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		13B428BF2748A3B500DE2E6D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13B428C02748A3C300DE2E6D /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +232,8 @@
 			files = (
 				13B428A027477BF400DE2E6D /* LaunchScreen.storyboard in Resources */,
 				13B4289D27477BF400DE2E6D /* Assets.xcassets in Resources */,
-				13B4289827477BF200DE2E6D /* Main.storyboard in Resources */,
+				13B428B527489E8200DE2E6D /* ListRepositories.storyboard in Resources */,
+				13B428B927489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +244,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B4289527477BF200DE2E6D /* ViewController.swift in Sources */,
+				13B428C42748A4A400DE2E6D /* ListRepositoriesViewModel.swift in Sources */,
+				13B428B827489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift in Sources */,
+				13B428BC27489FC600DE2E6D /* ListRepositoriesViewController.swift in Sources */,
+				13B428CC2748A52900DE2E6D /* License.swift in Sources */,
 				13B4289127477BF200DE2E6D /* AppDelegate.swift in Sources */,
 				13B4289327477BF200DE2E6D /* SceneDelegate.swift in Sources */,
+				13B428CB2748A52900DE2E6D /* RepositoriesResponse.swift in Sources */,
+				13B428BE2748A39000DE2E6D /* Constants.swift in Sources */,
+				13B428C92748A52800DE2E6D /* Repository.swift in Sources */,
+				13B428AE27489E2800DE2E6D /* WebService.swift in Sources */,
+				13B428CA2748A52900DE2E6D /* Owner.swift in Sources */,
+				13B428C12748A3C300DE2E6D /* String+Extensions.swift in Sources */,
 				13B4289B27477BF200DE2E6D /* TrendingGit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +263,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		13B4289627477BF200DE2E6D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B4289727477BF200DE2E6D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13B4289E27477BF400DE2E6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,7 +402,8 @@
 				INFOPLIST_FILE = TrendingGit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ListRepositories;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +431,8 @@
 				INFOPLIST_FILE = TrendingGit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = ListRepositories;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

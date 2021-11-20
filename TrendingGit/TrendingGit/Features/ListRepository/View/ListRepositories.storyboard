@@ -64,11 +64,22 @@
                     <connections>
                         <outlet property="listRepositoriesCollectionView" destination="HmH-jH-fQa" id="AEn-g7-5Qz"/>
                         <outlet property="searchTextField" destination="tdi-7G-Mab" id="3Pu-zT-mO7"/>
+                        <segue destination="LOR-uk-1KT" kind="show" identifier="segueToDetailVC" id="ync-v6-bxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="134.59821428571428"/>
+        </scene>
+        <!--DetailRepositoryVC-->
+        <scene sceneID="4Br-BE-Zhc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailRepository" referencedIdentifier="DetailRepositoryVC" id="LOR-uk-1KT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cai-ia-7JD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eo9-FH-TG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bBp-2U-MPq">

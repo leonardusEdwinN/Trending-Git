@@ -17,6 +17,8 @@ class ListRepositoriesViewController : UIViewController{
     
     // MARK: Variable
     private var listRepositoriesViewModel = ListRepositoriesViewModel()
+    private var selectedIndex: Int = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
@@ -31,7 +33,7 @@ class ListRepositoriesViewController : UIViewController{
         self.hideKeyboardWhenTappedAround()
     }
     
-    
+    // MARK: For dismiss Keyboard and Tap
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ListRepositoriesViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -50,6 +52,7 @@ class ListRepositoriesViewController : UIViewController{
         listRepositoriesCollectionView.dataSource = self
     }
     
+    // MARK: Searching REPO
     func searchRepo(keyword search : String){
         listRepositoriesViewModel.searchRepositories(for: search) { RepositoryViewModel in
             DispatchQueue.main.async {
@@ -58,9 +61,19 @@ class ListRepositoriesViewController : UIViewController{
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDetailVC"{
+            if let destVC = segue.destination as? DetailRepositoryViewController {
+                
+                let repositoryVM = listRepositoriesViewModel.modelAt(self.selectedIndex)
+                destVC.repositoryViewModel = repositoryVM
+            }
+        }
+    }
 }
 
-
+// MARK: Collectionview
 extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -79,16 +92,20 @@ extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectio
         if let fork = repositoryVM.item.forks_count, let star = repositoryVM.item.stargazers_count{
             cell.setUI(image: "", title: repositoryVM.item.name ?? "Repository Name", desc: "Fork : \(fork), Star : \(star)")
         }
-        
-        
-        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        
+        performSegue(withIdentifier: "segueToDetailVC", sender: self)
+        
     }
     
     
 }
 
-
+// MARK: Collection view delegate Layout
 extension ListRepositoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var widthCell : CGSize = CGSize(width: 100, height: 100)
@@ -109,6 +126,7 @@ extension ListRepositoriesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: Textfield delegate
 extension ListRepositoriesViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // User finished typing (hit return): hide the keyboard.
@@ -126,8 +144,4 @@ extension ListRepositoriesViewController : UITextFieldDelegate{
         
         
     }
-    
-    //    func textFieldDidBeginEditing(textField: UITextField) {
-    //        currentTextField = textField
-    //    }
 }

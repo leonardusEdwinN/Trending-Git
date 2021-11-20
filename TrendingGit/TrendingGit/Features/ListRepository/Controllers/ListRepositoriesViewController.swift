@@ -135,7 +135,13 @@ extension ListRepositoriesViewController : UITextFieldDelegate{
             if let searchKeyword = textField.text{
                 
                 searchTextField.resignFirstResponder()
-                searchRepo(keyword: searchKeyword)
+                if(textField.text == "" || textField.text == " "){
+                    //back to default keyword
+                    searchRepo(keyword: "a")
+                }else{
+                    //searching repo berdasarkan keyword
+                    searchRepo(keyword: searchKeyword)
+                }
             }
             
             return false

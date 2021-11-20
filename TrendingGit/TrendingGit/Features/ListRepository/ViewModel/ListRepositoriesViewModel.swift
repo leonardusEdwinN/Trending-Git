@@ -21,14 +21,13 @@ class ListRepositoriesViewModel {
     }
     
     func searchRepositories(for repository: String, completion: @escaping ([RepositoryViewModel]) -> Void) {
-        
         if(repositoriesResponse.count > 0){
             repositoriesResponse = []
         }
         
-        let searchURL = Constants.Urls.urlForSearchRepositories(repositories: repository)
-        
-        let repositoryResource = Resource<RepositoriesResponse>(url: searchURL) { data in
+        let searchUrl = Constants.Urls.urlForSearchRepositories(repositories: repository)
+
+        let repositoryResource = Resource<RepositoriesResponse>(url: searchUrl) { data in
             let repositoriesResponse = try? JSONDecoder().decode(RepositoriesResponse.self, from: data)
             return repositoriesResponse
         }
@@ -36,18 +35,12 @@ class ListRepositoriesViewModel {
         Webservice().load(resource: repositoryResource) { (result) in
             
             if let repositoryResource = result {
-//                self.repositoriesReponse.append(<#T##newElement: RepositoryViewModel##RepositoryViewModel#>)
                 for repo in repositoryResource.items {
                     self.repositoriesResponse.append(RepositoryViewModel(repository: repo))
-//                    let vm = RepositoryViewModel(repository: repo)
-//                    print("DATA RESOURCE : \(repo.name)")
                 }
                 
-//                print("DATA RESOURCE : \(self.repositoriesResponse)")
-//                completion(vm)
                 completion(self.repositoriesResponse)
             }
-//            completion(RepositoryViewModel)
         }
         
     }

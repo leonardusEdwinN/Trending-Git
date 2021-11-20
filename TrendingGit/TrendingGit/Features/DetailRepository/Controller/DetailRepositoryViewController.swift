@@ -7,22 +7,39 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 class DetailRepositoryViewController : UIViewController{
-    
+    // MARK: VARIABLE
     var repositoryViewModel : RepositoryViewModel?
     
+    // MARK: UICOMPONENT
     @IBOutlet weak var imageDetailRepo: UIImageView!
     @IBOutlet weak var labelRepoName: UILabel!
     @IBOutlet weak var labelRepoDesc: UILabel!
     @IBOutlet weak var labelFork: UILabel!
     @IBOutlet weak var labelStar: UILabel!
+    
+    // MARK: WEBKIT
+    @IBOutlet weak var wkWebView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MASUK \(repositoryViewModel?.item.name)")
-        
         setUI()
+        setWkWebView()
     }
+    
+    func setWkWebView(){
+        wkWebView.navigationDelegate = self
+        if let urlDetail = repositoryViewModel?.item.html_url{
+            let urlDefault = URL(string: urlDetail) ?? Constants.Urls.webViewDefaultValue()
+            
+            wkWebView.load(URLRequest(url: urlDefault))
+            wkWebView.allowsBackForwardNavigationGestures = true
+        }
+        
+    }
+    
     
     func setUI(){
         if let imageUrl = URL(string: repositoryViewModel?.item.owner?.avatar_url ?? ""),
@@ -40,4 +57,8 @@ class DetailRepositoryViewController : UIViewController{
         }
         
     }
+}
+
+extension DetailRepositoryViewController : WKNavigationDelegate{
+   
 }

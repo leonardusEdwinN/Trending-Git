@@ -10,10 +10,11 @@ import UIKit
 
 class ListRepositoriesViewController : UIViewController{
     
-    @IBOutlet weak var listRepositoriesCollectionView: UICollectionView!
+    // MARK: UIComponent
     
-    // MARK: Searh
+    @IBOutlet weak var listRepositoriesCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var viewStateEmpty: UIView!
     
     // MARK: Variable
     private var listRepositoriesViewModel = ListRepositoriesViewModel()
@@ -27,10 +28,22 @@ class ListRepositoriesViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        checkState()
         registerCell()
         searchTextField.delegate = self
         searchRepo(keyword: "a")
         self.hideKeyboardWhenTappedAround()
+    }
+    
+    func checkState(){
+        if(listRepositoriesViewModel.numberOfRows(1) == 0){
+            viewStateEmpty.isHidden = false
+            listRepositoriesCollectionView.isHidden = true
+        }else{
+            viewStateEmpty.isHidden = true
+            listRepositoriesCollectionView.isHidden = false
+        }
     }
     
     // MARK: For dismiss Keyboard and Tap
@@ -56,6 +69,7 @@ class ListRepositoriesViewController : UIViewController{
     func searchRepo(keyword search : String){
         listRepositoriesViewModel.searchRepositories(for: search) { RepositoryViewModel in
             DispatchQueue.main.async {
+                self.checkState()
                 self.listRepositoriesCollectionView.reloadData()
                 
             }
@@ -80,6 +94,7 @@ extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("ROW : \(listRepositoriesViewModel.numberOfRows(1))")
         return listRepositoriesViewModel.numberOfRows(section)
         
     }

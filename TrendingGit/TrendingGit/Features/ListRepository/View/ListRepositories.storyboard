@@ -16,6 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaU-2c-Up1">
+                                <rect key="frame" x="30" y="323" width="354" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry Cannot get data, Check your connection and try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-xs-g5J">
+                                        <rect key="frame" x="20" y="79.5" width="314" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="repeat" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vQP-Y1-k0w">
+                                        <rect key="frame" x="152" y="147" width="50" height="47"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="c8T-5A-OKk"/>
+                                            <constraint firstAttribute="height" constant="50" id="drs-SA-C7r"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Hlt-2G-Ymt"/>
+                                    <constraint firstItem="vQP-Y1-k0w" firstAttribute="centerX" secondItem="ZaU-2c-Up1" secondAttribute="centerX" id="VBy-lU-CP2"/>
+                                    <constraint firstItem="vQP-Y1-k0w" firstAttribute="top" secondItem="B1v-xs-g5J" secondAttribute="bottom" constant="25" id="ZJc-f7-243"/>
+                                    <constraint firstAttribute="trailing" secondItem="B1v-xs-g5J" secondAttribute="trailing" constant="20" id="rfe-rR-SN0"/>
+                                    <constraint firstItem="B1v-xs-g5J" firstAttribute="centerY" secondItem="ZaU-2c-Up1" secondAttribute="centerY" constant="-25" id="y6u-Qh-wNk"/>
+                                    <constraint firstItem="B1v-xs-g5J" firstAttribute="leading" secondItem="ZaU-2c-Up1" secondAttribute="leading" constant="20" id="yEL-aZ-h6c"/>
+                                    <constraint firstItem="B1v-xs-g5J" firstAttribute="centerX" secondItem="ZaU-2c-Up1" secondAttribute="centerX" id="z4k-oZ-wYC"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HmH-jH-fQa">
                                 <rect key="frame" x="15" y="163" width="384" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,10 +80,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZaU-2c-Up1" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="6Xc-ID-3Xa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HmH-jH-fQa" secondAttribute="bottom" constant="25" id="7Qb-Uv-1YQ"/>
+                            <constraint firstItem="ZaU-2c-Up1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="8m2-Ys-Gwr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HmH-jH-fQa" secondAttribute="trailing" constant="15" id="BrF-WQ-qNd"/>
                             <constraint firstItem="KPL-ct-mGM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UEQ-eo-Yla"/>
                             <constraint firstItem="HmH-jH-fQa" firstAttribute="top" secondItem="KPL-ct-mGM" secondAttribute="bottom" constant="25" id="Xsf-W3-5YY"/>
+                            <constraint firstItem="ZaU-2c-Up1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Zgc-QI-hfo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZaU-2c-Up1" secondAttribute="trailing" constant="30" id="ais-S9-pJq"/>
                             <constraint firstItem="KPL-ct-mGM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dw5-vu-cEr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KPL-ct-mGM" secondAttribute="trailing" id="lB1-U1-cv6"/>
                             <constraint firstItem="HmH-jH-fQa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="qWP-wC-yv2"/>
@@ -64,6 +97,7 @@
                     <connections>
                         <outlet property="listRepositoriesCollectionView" destination="HmH-jH-fQa" id="AEn-g7-5Qz"/>
                         <outlet property="searchTextField" destination="tdi-7G-Mab" id="3Pu-zT-mO7"/>
+                        <outlet property="viewStateEmpty" destination="ZaU-2c-Up1" id="QxG-cg-Okr"/>
                         <segue destination="LOR-uk-1KT" kind="show" identifier="segueToDetailVC" id="ync-v6-bxM"/>
                     </connections>
                 </viewController>
@@ -101,6 +135,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

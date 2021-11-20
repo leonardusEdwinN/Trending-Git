@@ -21,6 +21,8 @@ class ListRepositoriesViewModel {
     }
     
     func searchRepositories(for repository: String, completion: @escaping ([RepositoryViewModel]) -> Void) {
+        
+        print("KEYWORD : \(repository)")
         if(repositoriesResponse.count > 0){
             repositoriesResponse = []
         }

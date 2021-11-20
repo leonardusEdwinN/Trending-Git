@@ -29,7 +29,7 @@ class ListRepositoriesViewController : UIViewController{
         
         registerCell()
         searchTextField.delegate = self
-        searchRepo(keyword: "edwin")
+        searchRepo(keyword: "a")
         self.hideKeyboardWhenTappedAround()
     }
     

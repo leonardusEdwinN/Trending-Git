@@ -149,9 +149,8 @@
 		13B428B327489E6800DE2E6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13B428CD2748FE6C00DE2E6D /* CustomCells */,
 				13B428B427489E8200DE2E6D /* ListRepositories.storyboard */,
-				13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */,
-				13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +169,15 @@
 				13B428C02748A3C300DE2E6D /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13B428CD2748FE6C00DE2E6D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */,
+				13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

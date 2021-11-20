@@ -19,7 +19,7 @@ class ListRepositoriesViewController : UIViewController{
     private var listRepositoriesViewModel = ListRepositoriesViewModel()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-       
+        
     }
     
     override func viewDidLoad() {
@@ -51,10 +51,8 @@ class ListRepositoriesViewController : UIViewController{
     }
     
     func searchRepo(keyword search : String){
-        print("KEYWORD : \(search)")
         listRepositoriesViewModel.searchRepositories(for: search) { RepositoryViewModel in
             DispatchQueue.main.async {
-                print("DAATA : \(self.listRepositoriesViewModel.numberOfRows(1))")
                 self.listRepositoriesCollectionView.reloadData()
                 
             }
@@ -69,7 +67,6 @@ extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Data \(listRepositoriesViewModel.numberOfRows(section))")
         return listRepositoriesViewModel.numberOfRows(section)
         
     }
@@ -83,7 +80,7 @@ extension ListRepositoriesViewController : UICollectionViewDelegate, UICollectio
             cell.setUI(image: "", title: repositoryVM.item.name ?? "Repository Name", desc: "Fork : \(fork), Star : \(star)")
         }
         
-       
+        
         
         return cell
     }
@@ -115,24 +112,22 @@ extension ListRepositoriesViewController: UICollectionViewDelegateFlowLayout {
 extension ListRepositoriesViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // User finished typing (hit return): hide the keyboard.
-        print("TEXTFIELD TEXT : \(searchTextField.text)")
         
         if textField == searchTextField {
             if let searchKeyword = textField.text{
                 
-               searchTextField.resignFirstResponder()
-                print("KEYWORD SEARCH : \(searchKeyword)")
+                searchTextField.resignFirstResponder()
                 searchRepo(keyword: searchKeyword)
             }
             
-           return false
-           }
-           return true
+            return false
+        }
+        return true
         
         
     }
-
-//    func textFieldDidBeginEditing(textField: UITextField) {
-//        currentTextField = textField
-//    }
+    
+    //    func textFieldDidBeginEditing(textField: UITextField) {
+    //        currentTextField = textField
+    //    }
 }

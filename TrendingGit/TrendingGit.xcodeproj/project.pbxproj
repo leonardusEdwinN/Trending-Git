@@ -24,6 +24,9 @@
 		13B428CA2748A52900DE2E6D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C62748A52800DE2E6D /* Owner.swift */; };
 		13B428CB2748A52900DE2E6D /* RepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C72748A52800DE2E6D /* RepositoriesResponse.swift */; };
 		13B428CC2748A52900DE2E6D /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428C82748A52800DE2E6D /* License.swift */; };
+		13B428D42748FF5A00DE2E6D /* DetailRepository.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B428D32748FF5A00DE2E6D /* DetailRepository.storyboard */; };
+		13B428D62748FF8900DE2E6D /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428D52748FF8900DE2E6D /* DetailRepositoryViewController.swift */; };
+		13B428D8274909AA00DE2E6D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		13B428C62748A52800DE2E6D /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		13B428C72748A52800DE2E6D /* RepositoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesResponse.swift; sourceTree = "<group>"; };
 		13B428C82748A52800DE2E6D /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		13B428D32748FF5A00DE2E6D /* DetailRepository.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailRepository.storyboard; sourceTree = "<group>"; };
+		13B428D52748FF8900DE2E6D /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
+		13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +117,13 @@
 		13B428AF27489E4500DE2E6D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				13B428B027489E4B00DE2E6D /* List */,
+				13B428CE2748FF1A00DE2E6D /* DetailRepository */,
+				13B428B027489E4B00DE2E6D /* ListRepository */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		13B428B027489E4B00DE2E6D /* List */ = {
+		13B428B027489E4B00DE2E6D /* ListRepository */ = {
 			isa = PBXGroup;
 			children = (
 				13B428BA27489FAF00DE2E6D /* Controllers */,
@@ -124,7 +131,7 @@
 				13B428B227489E6400DE2E6D /* Model */,
 				13B428B127489E5E00DE2E6D /* ViewModel */,
 			);
-			path = List;
+			path = ListRepository;
 			sourceTree = "<group>";
 		};
 		13B428B127489E5E00DE2E6D /* ViewModel */ = {
@@ -149,9 +156,8 @@
 		13B428B327489E6800DE2E6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13B428CD2748FE6C00DE2E6D /* CustomCells */,
 				13B428B427489E8200DE2E6D /* ListRepositories.storyboard */,
-				13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */,
-				13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,8 +174,59 @@
 			isa = PBXGroup;
 			children = (
 				13B428C02748A3C300DE2E6D /* String+Extensions.swift */,
+				13B428D7274909AA00DE2E6D /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13B428CD2748FE6C00DE2E6D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				13B428B627489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.swift */,
+				13B428B727489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		13B428CE2748FF1A00DE2E6D /* DetailRepository */ = {
+			isa = PBXGroup;
+			children = (
+				13B428D22748FF4600DE2E6D /* Controller */,
+				13B428D12748FF4000DE2E6D /* View */,
+				13B428D02748FF3C00DE2E6D /* Model */,
+				13B428CF2748FF3700DE2E6D /* ViewModel */,
+			);
+			path = DetailRepository;
+			sourceTree = "<group>";
+		};
+		13B428CF2748FF3700DE2E6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13B428D02748FF3C00DE2E6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13B428D12748FF4000DE2E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13B428D32748FF5A00DE2E6D /* DetailRepository.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13B428D22748FF4600DE2E6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13B428D52748FF8900DE2E6D /* DetailRepositoryViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +290,7 @@
 				13B428A027477BF400DE2E6D /* LaunchScreen.storyboard in Resources */,
 				13B4289D27477BF400DE2E6D /* Assets.xcassets in Resources */,
 				13B428B527489E8200DE2E6D /* ListRepositories.storyboard in Resources */,
+				13B428D42748FF5A00DE2E6D /* DetailRepository.storyboard in Resources */,
 				13B428B927489F2C00DE2E6D /* ListRepositoriesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +313,8 @@
 				13B428C92748A52800DE2E6D /* Repository.swift in Sources */,
 				13B428AE27489E2800DE2E6D /* WebService.swift in Sources */,
 				13B428CA2748A52900DE2E6D /* Owner.swift in Sources */,
+				13B428D62748FF8900DE2E6D /* DetailRepositoryViewController.swift in Sources */,
+				13B428D8274909AA00DE2E6D /* UIImage+Extensions.swift in Sources */,
 				13B428C12748A3C300DE2E6D /* String+Extensions.swift in Sources */,
 				13B4289B27477BF200DE2E6D /* TrendingGit.xcdatamodeld in Sources */,
 			);

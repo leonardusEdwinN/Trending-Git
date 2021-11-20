@@ -15,6 +15,16 @@ struct Constants {
             return URL(string: "https://api.github.com/search/repositories?q=\(repositories.escaped())")!
         }
         
+        static func urlForSearchRepositoriesAll() -> URL {
+            
+            return URL(string: "https://api.github.com/search/repositories")!
+        }
+        
+        static func webViewDefaultValue() -> URL {
+            
+            return URL(string: "https://www.github.com")!
+        }
+        
     }
     
 }
